@@ -1,6 +1,6 @@
 import sqlite3, os
 
-nomeBD = '1'
+nomeBD = input('Digite o nome do banco de dados: ')
 try:
     conector = sqlite3.connect(nomeBD)
     id = 1
@@ -10,10 +10,10 @@ try:
     for contato in result:
         id += 1
     nome = 'Pessoa'
-    while nome != '':
+    while nome != '0':
         print('id: ', id)
         nome = input('Nome: ')
-        if nome != '':
+        if nome != '0':
             fone = input('Fone: ')
             cursor.execute('insert into agenda (id, nome, fone) values(?, ?, ?)', (id, nome,fone))
             conector.commit()

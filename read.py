@@ -1,7 +1,6 @@
-import os
-import sqlite3
+import sqlite3, os
 
-nomeBD = '1'
+nomeBD = input('Digite o nome do banco de dados: ')
 try:
     conector = sqlite3.connect(nomeBD)
     cursor = conector.cursor()
