@@ -1,6 +1,6 @@
 import sqlite3, os
 
-nomeBD = input('Digite o nome do banco de dados: ')
+nomeBD = input('Nome do banco de dados: ')
 try:
     conector = sqlite3.connect(nomeBD)
     id = '1'
